@@ -1,0 +1,2474 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>暴力迪吧素材库· 自由下载</title>
+    <!-- Font Awesome 6 (免费图标库) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ===== 浅色主题（默认） ===== */
+        :root {
+            --bg-primary: #f5f3f0;
+            --bg-secondary: #ebe8e4;
+            --bg-tertiary: #e0ddd8;
+            --text-primary: #2a2a2a;
+            --text-secondary: #5a5a5a;
+            --text-muted: #8a8a8a;
+            --card-bg: #ffffff;
+            --card-border: #d8d5d0;
+            --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            --accent-red: #e07a30;
+            --accent-red-hover: #c86820;
+            --accent-orange: #d4652e;
+            --nav-bg: #ffffff;
+            --nav-border: #e0ddd8;
+            --nav-text: #3a3a3a;
+            --nav-text-hover: #e07a30;
+            --cat-bg: #ebe8e4;
+            --cat-bg-active: #e07a30;
+            --search-bg: #ffffff;
+            --search-border: #d8d5d0;
+            --modal-bg: #ffffff;
+            --modal-overlay: rgba(0, 0, 0, 0.5);
+            --download-btn-bg: #e07a30;
+            --download-btn-hover: #c86820;
+            --footer-text: #8a8a8a;
+            --border-hard: 1px;
+            --accent-gradient: linear-gradient(135deg, #e07a30, #d4652e);
+            --success: #5a8f5a;
+            --warning: #c9a227;
+        }
+
+        /* ===== 工业灰主题（中性灰） ===== */
+        [data-theme="industrial"] {
+            --bg-primary: #3d3d3d;
+            --bg-secondary: #2f2f2f;
+            --bg-tertiary: #222222;
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b0b0;
+            --text-muted: #808080;
+            --card-bg: #333333;
+            --card-border: #4a4a4a;
+            --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+            --accent-red: #4a9fd4;
+            --accent-red-hover: #5ab0e8;
+            --accent-orange: #3d8bc4;
+            --nav-bg: #2a2a2a;
+            --nav-border: #3d3d3d;
+            --nav-text: #c0c0c0;
+            --nav-text-hover: #4a9fd4;
+            --cat-bg: #2f2f2f;
+            --cat-bg-active: #4a9fd4;
+            --search-bg: #2a2a2a;
+            --search-border: #3d3d3d;
+            --modal-bg: #2f2f2f;
+            --modal-overlay: rgba(0, 0, 0, 0.8);
+            --download-btn-bg: #4a9fd4;
+            --download-btn-hover: #5ab0e8;
+            --footer-text: #707070;
+            --border-hard: 1px;
+            --accent-gradient: linear-gradient(135deg, #4a9fd4, #3d8bc4);
+            --success: #5a9f5a;
+            --warning: #c9a227;
+        }
+
+        /* ===== 暴力迪吧战术风格（红黑橙） ===== */
+        [data-theme="madness"] {
+            --bg-primary: #0d0d0d;
+            --bg-secondary: #080808;
+            --bg-tertiary: #050505;
+            --text-primary: #d0d0d0;
+            --text-secondary: #909090;
+            --text-muted: #505050;
+            --card-bg: #111111;
+            --card-border: #1a1a1a;
+            --card-shadow: 0 2px 12px rgba(0, 0, 0, 0.8);
+            --accent-red: #ff5500;
+            --accent-red-hover: #ff6620;
+            --accent-orange: #ff3300;
+            --nav-bg: #0a0a0a;
+            --nav-border: #151515;
+            --nav-text: #808080;
+            --nav-text-hover: #ff5500;
+            --cat-bg: #080808;
+            --cat-bg-active: #ff5500;
+            --search-bg: #0a0a0a;
+            --search-border: #151515;
+            --modal-bg: #080808;
+            --modal-overlay: rgba(0, 0, 0, 0.92);
+            --download-btn-bg: #ff5500;
+            --download-btn-hover: #ff6620;
+            --footer-text: #303030;
+            --border-hard: 1px;
+            --accent-gradient: linear-gradient(135deg, #ff5500, #ff3300);
+            --success: #4a9f4a;
+            --warning: #b8922a;
+        }
+
+        /* 磨砂纹理 - 工业灰主题 */
+        [data-theme="industrial"] body::before {
+            background: 
+                repeating-radial-gradient(
+                    circle at 50% 50%,
+                    transparent 0,
+                    rgba(0, 0, 0, 0.12) 1px,
+                    transparent 2px
+                ),
+                linear-gradient(
+                    180deg,
+                    rgba(255, 255, 255, 0.015) 0%,
+                    rgba(0, 0, 0, 0.03) 100%
+                );
+            background-size: 9px 9px, 100% 100%;
+        }
+
+        body {
+            background: var(--bg-primary);
+            font-family: 'Inter', 'SF Mono', 'Consolas', monospace;
+            color: var(--text-primary);
+            padding: 0;
+            margin: 0;
+            transition: background 0.3s ease, color 0.3s ease;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-size: 14px;
+            position: relative;
+        }
+
+        /* 水泥灰磨砂纹理 */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                repeating-radial-gradient(
+                    circle at 50% 50%,
+                    transparent 0,
+                    rgba(180, 175, 170, 0.03) 1px,
+                    transparent 2px
+                ),
+                linear-gradient(
+                    180deg,
+                    rgba(255, 255, 255, 0.02) 0%,
+                    rgba(0, 0, 0, 0.02) 100%
+                );
+            background-size: 8px 8px, 100% 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        [data-theme="madness"] body::before {
+            background: 
+                repeating-radial-gradient(
+                    circle at 50% 50%,
+                    transparent 0,
+                    rgba(0, 0, 0, 0.15) 1px,
+                    transparent 2px
+                ),
+                linear-gradient(
+                    180deg,
+                    rgba(255, 255, 255, 0.01) 0%,
+                    rgba(0, 0, 0, 0.05) 100%
+                );
+            background-size: 10px 10px, 100% 100%;
+        }
+
+        /* 模拟Inter字体（如果未加载） */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        /* 顶部状态栏 */
+        .status-bar {
+            background: var(--bg-secondary);
+            border-bottom: var(--border-hard) solid var(--nav-border);
+            padding: 8px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            font-family: 'SF Mono', 'Consolas', monospace;
+        }
+
+        .status-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .status-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--success);
+        }
+
+        [data-theme="madness"] .status-dot {
+            box-shadow: 0 0 6px var(--success);
+        }
+
+        /* 导航栏 */
+        .navbar {
+            background: var(--nav-bg);
+            border-bottom: var(--border-hard) solid var(--nav-border);
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            color: var(--accent-red);
+            text-transform: uppercase;
+        }
+
+        .logo svg {
+            font-size: 1.3rem;
+            width: 36px;
+            height: 36px;
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .nav-btn {
+            background: transparent;
+            border: var(--border-hard) solid var(--card-border);
+            padding: 6px 12px;
+            border-radius: 2px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            color: var(--text-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .nav-btn:hover {
+            border-color: var(--accent-red);
+            color: var(--accent-red);
+        }
+
+        .nav-btn.active {
+            background: var(--accent-red);
+            color: white;
+            border-color: var(--accent-red);
+        }
+
+        /* 主布局 */
+        .main-layout {
+            display: flex;
+            height: calc(100vh - 100px);
+            position: relative;
+            z-index: 1;
+        }
+
+        /* 侧边栏 */
+        .sidebar {
+            width: 200px;
+            background: var(--bg-secondary);
+            border-right: var(--border-hard) solid var(--nav-border);
+            overflow-y: auto;
+            flex-shrink: 0;
+        }
+
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: var(--border-hard) solid var(--nav-border);
+        }
+
+        .sidebar-title {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+
+        .sidebar-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 12px;
+            margin: 2px 0;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .sidebar-item:hover {
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
+        }
+
+        .sidebar-item.active {
+            background: var(--accent-red);
+            color: white;
+        }
+
+        .sidebar-count {
+            font-size: 0.7rem;
+            background: var(--bg-tertiary);
+            padding: 2px 6px;
+            border-radius: 2px;
+            font-family: 'SF Mono', monospace;
+        }
+
+        .sidebar-item.active .sidebar-count {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* 内容区域 */
+        .content-area {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+        }
+
+        /* 工具栏 */
+        .toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            gap: 12px;
+            flex-wrap: wrap;
+            position: sticky;
+            top: -20px;
+            background: var(--bg-primary);
+            padding: 12px 0;
+            z-index: 50;
+            transition: all 0.25s ease;
+            transform-origin: top center;
+        }
+
+        .toolbar.stuck {
+            transform: scaleY(0.95);
+            background: var(--bg-secondary);
+        }
+
+        
+        [data-theme="industrial"] .toolbar,
+        [data-theme="madness"] .toolbar {
+            background: var(--bg-primary);
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: var(--search-bg);
+            border-radius: 2px;
+            padding: 6px 12px;
+            border: var(--border-hard) solid var(--search-border);
+            flex: 1;
+            max-width: 400px;
+        }
+
+        .search-box i {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .search-box input {
+            background: transparent;
+            border: none;
+            padding: 0 8px;
+            font-size: 0.85rem;
+            flex: 1;
+            outline: none;
+            color: var(--text-primary);
+            font-family: inherit;
+        }
+
+        .search-box input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .view-options {
+            display: flex;
+            gap: 8px;
+        }
+
+        .view-btn {
+            background: var(--bg-secondary);
+            border: var(--border-hard) solid var(--card-border);
+            padding: 6px 10px;
+            border-radius: 2px;
+            cursor: pointer;
+            color: var(--text-secondary);
+            transition: all 0.2s;
+        }
+
+        .view-btn:hover, .view-btn.active {
+            border-color: var(--accent-red);
+            color: var(--accent-red);
+        }
+
+        /* 统计面板 */
+        .stats-panel {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .stat-card {
+            background: var(--bg-secondary);
+            border: var(--border-hard) solid var(--card-border);
+            padding: 8px 10px;
+            border-radius: 2px;
+        }
+
+        .stat-label {
+            font-size: 0.65rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 2px;
+        }
+
+        .stat-value {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            font-family: 'SF Mono', monospace;
+        }
+
+        [data-theme="madness"] .stat-value {
+            color: var(--accent-red);
+        }
+
+        /* 素材网格 */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 10px;
+        }
+
+        /* 素材列表 */
+        .list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .list .asset-card {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 8px;
+        }
+
+        .list .card-cover {
+            width: 80px;
+            min-width: 80px;
+            height: 80px;
+            aspect-ratio: unset;
+        }
+
+        .list .card-info {
+            flex: 1;
+            padding: 0;
+        }
+
+        .list .card-title {
+            margin-bottom: 4px;
+        }
+
+        .list .card-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 6px;
+        }
+
+        .list .download-btn-small {
+            width: auto;
+            padding: 6px 16px;
+        }
+
+        /* 卡片 */
+        .asset-card {
+            cursor: pointer;
+            transition: all 0.2s;
+            background: var(--card-bg);
+            border: var(--border-hard) solid var(--card-border);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .asset-card:hover {
+            border-color: var(--accent-red);
+            box-shadow: var(--card-shadow);
+        }
+
+        .card-cover {
+            aspect-ratio: 1 / 1;
+            background: var(--bg-tertiary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-format {
+            position: absolute;
+            top: 6px;
+            right: 6px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 2px 5px;
+            border-radius: 2px;
+            font-size: 0.6rem;
+            font-weight: 700;
+            font-family: 'SF Mono', monospace;
+            text-transform: uppercase;
+        }
+
+        .card-info {
+            padding: 8px;
+        }
+
+        .card-title {
+            font-weight: 600;
+            font-size: 0.8rem;
+            margin-bottom: 4px;
+            color: var(--text-primary);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card-meta {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3px;
+            font-size: 0.65rem;
+            color: var(--text-secondary);
+            margin-bottom: 6px;
+        }
+
+        .card-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+        }
+
+        .card-meta-item i {
+            font-size: 0.6rem;
+            opacity: 0.7;
+        }
+
+        .download-btn-small {
+            background: var(--accent-red);
+            border: none;
+            padding: 5px 10px;
+            border-radius: 2px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: white;
+            cursor: pointer;
+            transition: 0.2s;
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .download-btn-small:hover {
+            background: var(--accent-red-hover);
+        }
+
+        /* 弹窗（Modal） */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--modal-overlay);
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            max-width: 800px;
+            width: 90%;
+            background: var(--modal-bg);
+            border: var(--border-hard) solid var(--card-border);
+            border-radius: 2px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .modal-body {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .modal-cover {
+            flex: 1;
+            background: var(--bg-tertiary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            min-height: 180px;
+        }
+
+        .modal-cover img {
+            width: 100%;
+            max-height: 240px;
+            object-fit: contain;
+        }
+
+        .modal-info {
+            flex: 1;
+            padding: 20px;
+            min-width: 300px;
+        }
+
+        .modal-info h2 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+            font-family: 'SF Mono', monospace;
+        }
+
+        .modal-author {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 16px;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .meta-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            margin: 16px 0;
+        }
+
+        .meta-item {
+            background: var(--bg-tertiary);
+            padding: 8px 12px;
+            border-radius: 2px;
+            font-size: 0.75rem;
+            border: var(--border-hard) solid var(--card-border);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .download-big {
+            background: var(--download-btn-bg);
+            border: none;
+            padding: 10px 0;
+            width: 100%;
+            border-radius: 2px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: white;
+            cursor: pointer;
+            margin-top: 16px;
+            transition: 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .download-big:hover {
+            background: var(--download-btn-hover);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 12px;
+            right: 16px;
+            font-size: 24px;
+            color: var(--text-primary);
+            cursor: pointer;
+            background: var(--bg-tertiary);
+            width: 32px;
+            height: 32px;
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: var(--border-hard) solid var(--card-border);
+        }
+
+        .close-modal:hover {
+            background: var(--accent-red);
+            color: white;
+            border-color: var(--accent-red);
+        }
+
+        @media (max-width: 900px) {
+            .main-layout {
+                flex-direction: column;
+                height: auto;
+            }
+            
+            .sidebar {
+                width: 100%;
+                border-right: none;
+                border-bottom: var(--border-hard) solid var(--nav-border);
+                max-height: 300px;
+            }
+            
+            .modal-body {
+                flex-direction: column;
+            }
+            
+            .modal-cover {
+                min-height: 200px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .status-bar {
+                display: none;
+            }
+
+            .stats-panel {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+        }
+
+        /* ===== 管理面板样式 ===== */
+        .admin-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--modal-overlay);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .admin-panel {
+            max-width: 900px;
+            width: 95%;
+            max-height: 85vh;
+            background: var(--modal-bg);
+            border: var(--border-hard) solid var(--card-border);
+            border-radius: 2px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .admin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 16px;
+            background: var(--bg-secondary);
+            border-bottom: var(--border-hard) solid var(--nav-border);
+        }
+
+        .admin-header h3 {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .admin-header h3 i {
+            color: var(--accent-red);
+        }
+
+        .admin-toolbar {
+            display: flex;
+            gap: 8px;
+        }
+
+        .admin-btn {
+            background: var(--bg-tertiary);
+            border: var(--border-hard) solid var(--card-border);
+            padding: 6px 12px;
+            border-radius: 2px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .admin-btn:hover {
+            border-color: var(--accent-red);
+            color: var(--accent-red);
+        }
+
+        .admin-btn-primary {
+            background: var(--accent-red);
+            border-color: var(--accent-red);
+            color: white;
+        }
+
+        .admin-btn-primary:hover {
+            background: var(--accent-red-hover);
+            color: white;
+        }
+
+        .admin-body {
+            flex: 1;
+            overflow-y: auto;
+            padding: 16px;
+        }
+
+        .admin-list-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: var(--border-hard) solid var(--nav-border);
+        }
+
+        .admin-list-title {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+
+        .admin-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .admin-table th {
+            text-align: left;
+            padding: 8px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: var(--border-hard) solid var(--nav-border);
+        }
+
+        .admin-table td {
+            padding: 10px 8px;
+            font-size: 0.8rem;
+            color: var(--text-primary);
+            border-bottom: var(--border-hard) solid var(--nav-border);
+            vertical-align: middle;
+        }
+
+        .admin-table tr:hover td {
+            background: var(--bg-secondary);
+        }
+
+        .admin-table .col-cover {
+            width: 50px;
+        }
+
+        .admin-table .col-cover img {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            border-radius: 2px;
+        }
+
+        .admin-table .col-actions {
+            width: 80px;
+            text-align: center;
+        }
+
+        .admin-action-btn {
+            background: transparent;
+            border: none;
+            padding: 4px 8px;
+            cursor: pointer;
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            transition: color 0.2s;
+        }
+
+        .admin-action-btn:hover {
+            color: var(--accent-red);
+        }
+
+        .admin-action-btn.delete:hover {
+            color: #e74c3c;
+        }
+
+        /* 表单弹窗 */
+        .form-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--modal-overlay);
+            z-index: 2100;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .form-modal {
+            max-width: 500px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            background: var(--modal-bg);
+            border: var(--border-hard) solid var(--card-border);
+            border-radius: 2px;
+        }
+
+        .form-header {
+            padding: 12px 16px;
+            background: var(--bg-secondary);
+            border-bottom: var(--border-hard) solid var(--nav-border);
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .form-body {
+            padding: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 12px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 8px 10px;
+            font-size: 0.8rem;
+            border: var(--border-hard) solid var(--card-border);
+            border-radius: 2px;
+            background: var(--search-bg);
+            color: var(--text-primary);
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-red);
+        }
+
+        .form-group textarea {
+            min-height: 60px;
+            resize: vertical;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .form-footer {
+            display: flex;
+            justify-content: flex-end;
+            gap: 8px;
+            padding: 12px 16px;
+            border-top: var(--border-hard) solid var(--nav-border);
+        }
+
+        /* 密码弹窗 */
+        .password-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--modal-overlay);
+            z-index: 2500;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .password-modal {
+            max-width: 350px;
+            width: 90%;
+            background: var(--modal-bg);
+            border: var(--border-hard) solid var(--card-border);
+            border-radius: 2px;
+            padding: 24px;
+            text-align: center;
+        }
+
+        .password-modal i {
+            font-size: 2rem;
+            color: var(--accent-red);
+            margin-bottom: 12px;
+        }
+
+        .password-modal h4 {
+            font-size: 1rem;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+        }
+
+        .password-modal input {
+            width: 100%;
+            padding: 10px;
+            font-size: 0.9rem;
+            text-align: center;
+            border: var(--border-hard) solid var(--card-border);
+            border-radius: 2px;
+            background: var(--search-bg);
+            color: var(--text-primary);
+            margin-bottom: 12px;
+        }
+
+        .password-error {
+            color: #e74c3c;
+            font-size: 0.75rem;
+            margin-bottom: 12px;
+            display: none;
+        }
+
+        .password-actions {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+        }
+
+        .password-actions button {
+            padding: 8px 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .password-actions .cancel-btn {
+            background: var(--bg-tertiary);
+            border: var(--border-hard) solid var(--card-border);
+            color: var(--text-primary);
+        }
+
+        .password-actions .confirm-btn {
+            background: var(--accent-red);
+            border: var(--border-hard) solid var(--accent-red);
+            color: white;
+        }
+
+        .click-hint {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            margin-top: 12px;
+        }
+
+        /* 空状态 */
+        .admin-empty {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-muted);
+        }
+
+        .admin-empty i {
+            font-size: 2rem;
+            margin-bottom: 12px;
+            opacity: 0.5;
+        }
+
+        /* Toast提示 */
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: var(--bg-secondary);
+            border: var(--border-hard) solid var(--card-border);
+            padding: 10px 20px;
+            border-radius: 2px;
+            font-size: 0.8rem;
+            color: var(--text-primary);
+            z-index: 3000;
+            transition: transform 0.3s ease;
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .toast.success {
+            border-color: var(--success);
+            color: var(--success);
+        }
+
+        .toast.error {
+            border-color: #e74c3c;
+            color: #e74c3c;
+        }
+
+        /* 加载动画 */
+        .loading-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--modal-overlay);
+            z-index: 5000;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 16px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .loading-overlay.show {
+            display: flex;
+        }
+
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid var(--bg-tertiary);
+            border-top-color: var(--accent-red);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* 图片加载占位动画 */
+        .card-cover.loading::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, var(--bg-tertiary) 25%, var(--card-bg) 50%, var(--bg-tertiary) 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        /* 空状态 */
+        .empty-state {
+            display: none;
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-muted);
+        }
+
+        .empty-state.show {
+            display: block;
+        }
+
+        .empty-state i {
+            font-size: 3rem;
+            margin-bottom: 16px;
+            opacity: 0.5;
+        }
+
+        .empty-state h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: var(--text-secondary);
+        }
+
+        .empty-state p {
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+<!-- 顶部状态栏 -->
+<div class="status-bar">
+    <div class="status-item">
+        <div class="status-dot"></div>
+        <span>系统运行中</span>
+    </div>
+    <div class="status-item">
+        <span id="currentTime"></span>
+    </div>
+    <div class="status-item">
+        <span>v2.0.1</span>
+    </div>
+</div>
+
+<!-- 导航栏 -->
+<div class="navbar">
+    <div class="logo">
+        <svg width="24" height="24" viewBox="0 0 41.4 77.24" fill="currentColor" style="color: var(--accent-red);">
+          <g>
+            <path d="M27.2,54.35c0-.06,0-.11,0-.15,0,.1-.02.2-.05.3l.05-.15M26.35,49.15l.05.3.55,1.15c-.13-.73-.33-1.22-.6-1.45M26.1,47.15h-.05c.03.07.07.15.1.25,0-.1-.02-.18-.05-.25M26.05,46.05l-.45-.15c.1,0,.18,0,.25,0l-.7-.55-.65-.35c-.13-.1-.28-.18-.45-.25.07.03.12.07.15.1l.2.25c.53.33.95.73,1.25,1.2.04.03.08.06.1.1.08.04.14.09.2.15l.1-.5M22.15,44.3v.05h.1s.02-.05.05-.05h-.15M22.35,44.15l-.05-.05v.05h.05M22.25,44l-.05-.7-.05,1h.15l-.05-.25v-.05Z"/>
+            <path d="M25.7,46.4c.06.08.11.16.15.25.03.03.07.1.1.2.03.1.07.2.1.3h.05c.03-.3.02-.48-.05-.55,0-.07-.04-.08-.1-.05-.06-.06-.12-.11-.2-.15-.02-.04-.06-.07-.1-.1.02.04.04.07.05.1M26.05,46.05l-.2-.15c-.07,0-.15,0-.25,0l.45.15M26.05,46.3v-.25l-.1.5c.06-.03.1-.02.1.05v-.3Z"/>
+            <path d="M22.35,44.3h-.05s-.05.02-.05.05c.3.03.48.03.55,0v-.05h-.45M21.15,35.65l-.4-.05.35.05c.3.07.55.2.75.4l.25.15.8.95.15.25c.07.17.08.37.05.6,0,.37-.05.73-.15,1.1l-.05.15v.1l-.2.25-.3.8-.1.1-.2,1.15v.6s.07.02.1.05l-.05-.65.2-1.15.1-.1.3-.8.2-.25v-.1l.05-.15c.1-.37.15-.73.15-1.1.03-.23.02-.43-.05-.6l-.15-.25-.8-.95-.25-.15c-.2-.2-.45-.33-.75-.4Z"/>
+            <path d="M21.6,44.45h.05c.1-.03.27-.07.5-.1v-.05c-.2.03-.38.08-.55.15Z"/>
+            <path d="M12.35,35l-.2.25.4-.1-.2-.15Z"/>
+            <path d="M8.3,27.9l.05.25v-.25h-.05M20.1,47.15c.07,0,.12,0,.15,0l-.1-.05-.05.05Z"/>
+          </g>
+          <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="3" d="M7.03,40.3c-3.68-4.41-5.53-9.74-5.53-16s1.88-11.68,5.65-16.15c1.73-2.07,3.65-3.65,5.75-4.75,2-1.07,4.17-1.68,6.5-1.85l1.3-.05c.73,0,1.45.05,2.15.15,4.4.47,8.22,2.63,11.45,6.5l.9,1.15c1.8,2.4,3.08,5.07,3.85,8,.57,2.17.85,4.48.85,6.95v.1c0,6.3-1.87,11.67-5.6,16.1-.41.49-.84.95-1.27,1.38M5.7,73.12c6.78,2.93,16.9,3.4,30.38,1.4M7.03,40.3s.08.1.12.15c2.5,3,5.35,4.98,8.55,5.95.33.1.65.18.95.25l.45.1.05.05c.1.03.28.07.52.1l.28-5.3.15-.85.05-2.4.15-.55v-.2l.15-.2.15-.4.45-.55.2-.3.45-.4.2-.05h.05l.75-.1h.05l.4.05c.3.07.55.2.75.4l.25.15.8.95.15.25c.07.17.08.37.05.6,0,.37-.05.73-.15,1.1l-.05.15v.1l-.2.25-.3.8-.1.1-.2,1.15.05.65.1,1.8s-.02-.05-.05-.05l.05.25h.05l-.05-.15v-.05l.05.05c.13.03.25.08.35.15M22.8,44.35c.37.1.68.2.95.3h.1s.07.02.1.05l.05.05h.05c.17.07.32.15.45.25l.65.35.7.55c0-.37-.05-.68-.15-.95.5-.03,1.08.07,1.75.3.21.08.39.17.55.25,1.8-.88,3.48-2.1,5.02-3.67M20.75,35.6l.35.05c.3.07.55.2.75.4l.25.15.8.95.15.25c.07.17.08.37.05.6,0,.37-.05.73-.15,1.1l-.05.15v.1l-.2.25-.3.8-.1.1-.2,1.15v.6M31.7,27c-3.4.87-6.85,1.25-10.35,1.15v7.2M20.3,44.7c.5-.07.93-.15,1.3-.25.17-.07.35-.12.55-.15l.05-1-.1-1.05M27.15,54.5v.05l-.1.35-.05.1-.35.3-.65.3h-.3l-3.05.3h-.15l-1.65-.3-1.4-1.4c-.07-.07-.13-.12-.2-.15-.97-.97-1.52-2.07-1.65-3.3v-.3c0-.53.02-.93.05-1.2l-.05-.85.07-1.5M26.4,49.45v1.05c-.1.27-.23.68-.4,1.25s-.58.8-1.25.7c-.27-.03-.52-.1-.75-.2-.43-.2-.78-.53-1.05-1,0-.07,0-.15,0-.25l-.45-1.35-.95-.85h-1.5M11.1,27c3.4.87,6.82,1.25,10.25,1.15v-11.9M22.2,43.3l.05.7v.05M22.15,44.3v.05M22.25,44.35h-.05M22.3,44.3h-.15M22.3,44.15h.05v.15M22.8,44.35c-.07.03-.25.03-.55,0M26.05,46.6v-.55l-.1.5c.06-.03.1-.02.1.05.07.07.08.25.05.55.03.07.05.15.05.25,0,.03.02.13.05.3.03.17.07.37.1.6.07.23.08.4.05.5v.35M26.95,50.6c.17,1.57.25,2.75.25,3.55v.07s0,.07,0,.12l.35-1.25.2-.4c.17-1.43.42-2.62.75-3.55.37-.97.53-1.67.5-2.1,0-.47-.1-.82-.3-1.05-.11-.16-.35-.33-.7-.5-.63.31-1.28.58-1.95.8M26.05,46.05l-.2-.15c-.07,0-.15,0-.25,0l.45.15"/>
+          <path fill="none" stroke="currentColor" stroke-linejoin="bevel" stroke-width="3" d="M33.02,41.83c.32,1.95.84,5.76,1.57,11.42.76,5.43,1.25,12.52,1.48,21.28M5.7,73.12l-.15-24.28c.1-1.23.13-2.47.1-3.7,0-1.79.46-3.4,1.38-4.85"/>
+        </svg>
+        <span>MADNESS 素材库</span>
+    </div>
+    <div class="nav-actions">
+        <button class="nav-btn" id="themeToggle">
+            <i class="fas fa-adjust"></i>
+            <span>主题</span>
+        </button>
+        <a href="#" class="nav-btn" id="openSubmit">
+            <i class="fas fa-upload"></i>
+            <span>投稿</span>
+        </a>
+        <a href="#" class="nav-btn" id="openAbout">
+            <i class="fas fa-info-circle"></i>
+            <span>关于</span>
+        </a>
+    </div>
+</div>
+
+<!-- 主布局 -->
+<div class="main-layout">
+    <!-- 加载动画 -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="loading-spinner"></div>
+        <span>加载中...</span>
+    </div>
+    <!-- 侧边栏 -->
+    <div class="sidebar">
+        <div class="sidebar-section">
+            <div class="sidebar-title">分类</div>
+            <div id="sidebarCategories">
+                <div class="sidebar-item active" data-cat="all">
+                    <span>全部素材</span>
+                    <span class="sidebar-count" id="cat-count-all">0</span>
+                </div>
+                <div class="sidebar-item" data-cat="综合">
+                    <span>综合</span>
+                    <span class="sidebar-count" id="cat-count-综合">0</span>
+                </div>
+                <div class="sidebar-item" data-cat="角色">
+                    <span>角色</span>
+                    <span class="sidebar-count" id="cat-count-角色">0</span>
+                </div>
+                <div class="sidebar-item" data-cat="武器">
+                    <span>武器</span>
+                    <span class="sidebar-count" id="cat-count-武器">0</span>
+                </div>
+                <div class="sidebar-item" data-cat="场景">
+                    <span>场景</span>
+                    <span class="sidebar-count" id="cat-count-场景">0</span>
+                </div>
+                <div class="sidebar-item" data-cat="特效">
+                    <span>特效</span>
+                    <span class="sidebar-count" id="cat-count-特效">0</span>
+                </div>
+                <div class="sidebar-item" data-cat="音效">
+                    <span>音效</span>
+                    <span class="sidebar-count" id="cat-count-音效">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 内容区域 -->
+    <div class="content-area">
+        <!-- 统计面板 -->
+        <div class="stats-panel">
+            <div class="stat-card clickable" id="adminTrigger">
+                <div class="stat-label">素材总数</div>
+                <div class="stat-value" id="statTotal">6</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">总大小</div>
+                <div class="stat-value" id="statSize">0MB</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">更新日期</div>
+                <div class="stat-value">今日</div>
+            </div>
+        </div>
+
+        <!-- 工具栏 -->
+        <div class="toolbar">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="搜索素材...">
+            </div>
+            <div class="view-options">
+                <button class="view-btn active" title="网格视图">
+                    <i class="fas fa-th"></i>
+                </button>
+                <button class="view-btn" title="列表视图">
+                    <i class="fas fa-list"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- 网格容器 -->
+        <div id="assetGrid" class="grid"></div>
+        <!-- 空状态 -->
+        <div id="emptyState" class="empty-state">
+            <i class="fas fa-search"></i>
+            <h3>没有找到素材</h3>
+            <p>换个关键词试试</p>
+        </div>
+    </div>
+</div>
+
+<!-- 弹窗 Modal -->
+<div id="detailModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-body">
+            <div class="modal-cover">
+                <img id="modalCover" src="" alt="cover">
+            </div>
+            <div class="modal-info">
+                <h2 id="modalTitle"></h2>
+                <div class="modal-author"><i class="fas fa-user"></i> <span id="modalAuthor"></span></div>
+                <div class="meta-grid">
+                    <span class="meta-item">
+                        <span>分类</span>
+                        <span id="modalCategory"></span>
+                    </span>
+                    <span class="meta-item">
+                        <span>格式</span>
+                        <span id="modalFormat"></span>
+                    </span>
+                    <span class="meta-item">
+                        <span>大小</span>
+                        <span id="modalSize"></span>
+                    </span>
+                </div>
+                <p id="modalDesc" style="margin: 16px 0; line-height: 1.6; color: var(--text-secondary);"></p>
+                <button id="modalDownloadBtn" class="download-big"><i class="fas fa-download"></i> 下载素材</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 密码验证弹窗 -->
+<div id="passwordModal" class="password-overlay">
+    <div class="password-modal">
+        <i class="fas fa-lock"></i>
+        <h4>请输入管理员密码</h4>
+        <input type="password" id="adminPassword" placeholder="密码">
+        <div id="passwordError" class="password-error">你不是管理员，别试了</div>
+        <div class="password-actions">
+            <button class="cancel-btn" id="passwordCancel">取消</button>
+            <button class="confirm-btn" id="passwordConfirm">确认</button>
+        </div>
+        <div class="click-hint">提示：连续点击素材总数卡片5次</div>
+    </div>
+</div>
+
+<!-- 管理面板 -->
+<div id="adminPanel" class="admin-overlay">
+    <div class="admin-panel">
+        <div class="admin-header">
+            <h3><i class="fas fa-tools"></i> 素材管理面板</h3>
+            <div class="admin-toolbar">
+                <button class="admin-btn admin-btn-primary" id="adminAdd">
+                    <i class="fas fa-plus"></i> 添加素材
+                </button>
+                <button class="admin-btn" id="adminPublish" style="background: var(--success); border-color: var(--success); color: white;">
+                    <i class="fas fa-cloud-upload-alt"></i> 发布 (<span id="pendingCount">0</span>)
+                </button>
+                <button class="admin-btn" id="adminClose">
+                    <i class="fas fa-times"></i> 关闭
+                </button>
+            </div>
+        </div>
+        <div class="admin-body">
+            <!-- 待发布列表 -->
+            <div id="pendingSection" style="display: none; margin-bottom: 16px; padding: 12px; background: var(--bg-tertiary); border-radius: 2px; border: 1px dashed var(--accent-red);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                    <span style="font-size: 0.8rem; font-weight: 600; color: var(--accent-red);">
+                        <i class="fas fa-clock"></i> 待发布列表 (<span id="pendingCount2">0</span>条)
+                    </span>
+                    <div style="display: flex; gap: 8px;">
+                        <button class="admin-btn" id="clearPendingBtn" style="font-size: 0.7rem; padding: 4px 8px;">
+                            <i class="fas fa-trash"></i> 清空
+                        </button>
+                        <button class="admin-btn admin-btn-primary" id="confirmPublishBtn" style="font-size: 0.7rem; padding: 4px 8px;">
+                            <i class="fas fa-check"></i> 确认发布
+                        </button>
+                    </div>
+                </div>
+                <div id="pendingList" style="display: flex; flex-wrap: wrap; gap: 8px;"></div>
+            </div>
+            <!-- 已发布列表 -->
+            <div class="admin-list-header">
+                <span class="admin-list-title"><i class="fas fa-box"></i> 已发布素材</span>
+                <span id="adminCount" style="font-size: 0.75rem; color: var(--text-muted);">共 0 条</span>
+            </div>
+            <div id="adminTableContainer">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th class="col-cover">封面</th>
+                            <th>名称</th>
+                            <th>分类</th>
+                            <th>格式</th>
+                            <th>大小</th>
+                            <th class="col-actions">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody id="adminTableBody">
+                    </tbody>
+                </table>
+            </div>
+            <div id="adminEmpty" class="admin-empty" style="display: none;">
+                <i class="fas fa-inbox"></i>
+                <p>暂无素材，点击上方"添加素材"开始</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 添加/编辑素材表单弹窗 -->
+<div id="formModal" class="form-overlay">
+    <div class="form-modal">
+        <div class="form-header" id="formTitle">添加新素材</div>
+        <div class="form-body">
+            <input type="hidden" id="formId">
+            <div class="form-group">
+                <label>素材名称 *</label>
+                <input type="text" id="formName" placeholder="如：特工戴维斯">
+            </div>
+            <div class="form-group">
+                <label>作者/来源</label>
+                <input type="text" id="formAuthor" placeholder="如：社区贡献者·K">
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>分类 *</label>
+                    <div id="formCategoryGroup" style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px;">
+                        <label style="display: flex; align-items: center; gap: 4px; cursor: pointer; font-size: 0.85rem;">
+                            <input type="checkbox" name="formCategory" value="综合"> 综合
+                        </label>
+                        <label style="display: flex; align-items: center; gap: 4px; cursor: pointer; font-size: 0.85rem;">
+                            <input type="checkbox" name="formCategory" value="角色"> 角色
+                        </label>
+                        <label style="display: flex; align-items: center; gap: 4px; cursor: pointer; font-size: 0.85rem;">
+                            <input type="checkbox" name="formCategory" value="武器"> 武器
+                        </label>
+                        <label style="display: flex; align-items: center; gap: 4px; cursor: pointer; font-size: 0.85rem;">
+                            <input type="checkbox" name="formCategory" value="场景"> 场景
+                        </label>
+                        <label style="display: flex; align-items: center; gap: 4px; cursor: pointer; font-size: 0.85rem;">
+                            <input type="checkbox" name="formCategory" value="特效"> 特效
+                        </label>
+                        <label style="display: flex; align-items: center; gap: 4px; cursor: pointer; font-size: 0.85rem;">
+                            <input type="checkbox" name="formCategory" value="音效"> 音效
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>文件格式 *</label>
+                    <select id="formFormat">
+                        <option value="FLA">FLA</option>
+                        <option value="PNG">PNG</option>
+                        <option value="JPG">JPG</option>
+                        <option value="GIF">GIF</option>
+                        <option value="PSD">PSD</option>
+                        <option value="AI">AI</option>
+                        <option value="SVG">SVG</option>
+                        <option value="FBX">FBX</option>
+                        <option value="OBJ">OBJ</option>
+                        <option value="BLEND">BLEND</option>
+                        <option value="C4D">C4D</option>
+                        <option value="MP4">MP4</option>
+                        <option value="MOV">MOV</option>
+                        <option value="AE">AE</option>
+                        <option value="WAV">WAV</option>
+                        <option value="MP3">MP3</option>
+                        <option value="ZIP">ZIP</option>
+                        <option value="RAR">RAR</option>
+                        <option value="7Z">7Z</option>
+                        <option value="EXE">EXE</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>文件大小</label>
+                <div style="display: flex; gap: 8px;">
+                    <input type="text" id="formSize" placeholder="数值" style="flex: 1; width: 100%; padding: 8px 10px; font-size: 0.8rem; border: var(--border-hard) solid var(--card-border); border-radius: 2px; background: var(--search-bg); color: var(--text-primary); font-family: inherit;">
+                    <select id="formSizeUnit" style="width: 80px; padding: 8px 10px; font-size: 0.8rem; border: var(--border-hard) solid var(--card-border); border-radius: 2px; background: var(--search-bg); color: var(--text-primary); font-family: inherit;">
+                        <option value="KB">KB</option>
+                        <option value="MB" selected>MB</option>
+                        <option value="GB">GB</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>封面图 *</label>
+                <div style="display: flex; gap: 8px; align-items: center;">
+                    <input type="text" id="formCover" placeholder="图片链接或上传本地图片" style="flex: 1;">
+                    <button type="button" class="admin-btn" id="uploadCoverBtn" style="white-space: nowrap;">
+                        <i class="fas fa-image"></i> 上传
+                    </button>
+                </div>
+                <input type="file" id="coverFileInput" accept="image/*" style="display: none;">
+                <div id="coverPreview" style="margin-top: 8px; display: none;">
+                    <img id="coverPreviewImg" style="max-width: 100%; max-height: 150px; border-radius: 2px; border: 1px solid var(--card-border);">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>下载链接 *</label>
+                <input type="text" id="formDownload" placeholder="填入123云盘链接">
+            </div>
+            <div class="form-group">
+                <label>简介</label>
+                <textarea id="formDesc" placeholder="简要描述素材内容"></textarea>
+            </div>
+        </div>
+        <div class="form-footer">
+            <button class="admin-btn" id="formCancel">取消</button>
+            <button class="admin-btn admin-btn-primary" id="formSave">确认保存</button>
+        </div>
+    </div>
+</div>
+
+<!-- Toast提示 -->
+<div id="toast" class="toast"></div>
+
+<script>
+    // ===== 主题切换功能 =====
+    const themeToggle = document.getElementById('themeToggle');
+    const themeText = themeToggle.querySelector('span');
+
+    function loadTheme() {
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        if (savedTheme === 'industrial') {
+            document.documentElement.setAttribute('data-theme', 'industrial');
+            themeText.textContent = '工业灰';
+        } else if (savedTheme === 'madness') {
+            document.documentElement.setAttribute('data-theme', 'madness');
+            themeText.textContent = '暴力迪';
+        } else {
+            document.documentElement.removeAttribute('data-theme');
+            themeText.textContent = '浅色';
+        }
+    }
+
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        if (!currentTheme || currentTheme === 'light') {
+            document.documentElement.setAttribute('data-theme', 'industrial');
+            localStorage.setItem('theme', 'industrial');
+            themeText.textContent = '工业灰';
+        } else if (currentTheme === 'industrial') {
+            document.documentElement.setAttribute('data-theme', 'madness');
+            localStorage.setItem('theme', 'madness');
+            themeText.textContent = '暴力迪';
+        } else {
+            document.documentElement.removeAttribute('data-theme');
+            localStorage.setItem('theme', 'light');
+            themeText.textContent = '浅色';
+        }
+    });
+
+    loadTheme();
+
+    // ===== 时间显示 =====
+    function updateTime() {
+        const now = new Date();
+        const timeStr = now.toLocaleTimeString('en-US', {
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: false
+        });
+        document.getElementById('currentTime').textContent = timeStr;
+    }
+    updateTime();
+    setInterval(updateTime, 1000);
+
+    // ----------------------------- 素材数据 --------------------------------
+    let assetsData = [];
+    let pendingAssets = []; // 待发布列表
+    let pendingDeletes = []; // 待删除列表
+
+    // 从localStorage读取用户偏好
+    let currentFilter = localStorage.getItem('categoryFilter') || "all";
+    let searchKeyword = "";
+    let currentView = localStorage.getItem('viewMode') || "grid";
+
+    // 默认占位图（用于图片加载失败）
+    const PLACEHOLDER_IMG = "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23ddd' width='100' height='100'/><text x='50' y='55' text-anchor='middle' fill='%23999' font-size='12'>?</text></svg>";
+
+    // 内置备用数据（本地测试时使用）
+    const fallbackData = [
+        {
+            id: 1,
+            name: "特工戴维斯",
+            author: "社区贡献者·K",
+            category: "角色",
+            format: "PNG",
+            size: "2.4 MB",
+            cover: "https://picsum.photos/id/100/400/400",
+            downloadLink: "https://www.123pan.com/s/example1",
+            description: "高精度角色立绘，透明背景，适用于同人创作。"
+        },
+        {
+            id: 2,
+            name: "M2 重机枪",
+            author: "武器库",
+            category: "武器",
+            format: "FBX",
+            size: "5.1 MB",
+            cover: "https://picsum.photos/id/26/400/400",
+            downloadLink: "https://www.123pan.com/s/example2",
+            description: "3D模型，包含纹理贴图。"
+        },
+        {
+            id: 3,
+            name: "废弃工厂",
+            author: "场景师L",
+            category: "场景",
+            format: "JPG",
+            size: "8.2 MB",
+            cover: "https://picsum.photos/id/96/400/400",
+            downloadLink: "https://www.123pan.com/s/example3",
+            description: "4K概念设计图，后工业风格。"
+        },
+        {
+            id: 4,
+            name: "爆炸特效",
+            author: "FX_Lab",
+            category: "特效",
+            format: "MP4",
+            size: "12 MB",
+            cover: "https://picsum.photos/id/163/400/400",
+            downloadLink: "https://www.123pan.com/s/example4",
+            description: "爆炸序列帧动画，带透明通道。"
+        },
+        {
+            id: 5,
+            name: "枪声合辑",
+            author: "Audio_Bank",
+            category: "音效",
+            format: "WAV",
+            size: "6.7 MB",
+            cover: "https://picsum.photos/id/179/400/400",
+            downloadLink: "https://www.123pan.com/s/example5",
+            description: "多种枪械射击音效，44.1kHz。"
+        },
+        {
+            id: 6,
+            name: "暗影特工",
+            author: "MadArtist",
+            category: "角色",
+            format: "PSD",
+            size: "18 MB",
+            cover: "https://picsum.photos/id/169/400/400",
+            downloadLink: "https://www.123pan.com/s/example6",
+            description: "分层源文件，可编辑。"
+        }
+    ];
+
+    async function loadAssets() {
+        try {
+            const response = await fetch('./assets.json?t=' + Date.now());
+            if (response.ok) {
+                const data = await response.json();
+                assetsData = data.assets || fallbackData;
+            } else {
+                assetsData = fallbackData;
+            }
+        } catch (e) {
+            console.log('本地测试模式，使用内置数据');
+            assetsData = fallbackData;
+        }
+        
+        try {
+            const savedPending = localStorage.getItem('pendingAssets');
+            const savedDeletes = localStorage.getItem('pendingDeletes');
+            if (savedPending) pendingAssets = JSON.parse(savedPending);
+            if (savedDeletes) pendingDeletes = JSON.parse(savedDeletes);
+        } catch (e) {}
+        
+        updateStats();
+        updateCategoryCounts();
+        restoreCategorySelection();
+        restoreViewSelection();
+        renderGrid();
+        renderAdminTable();
+        renderPendingList();
+    }
+
+    // 保存待发布列表到localStorage
+    function savePendingToStorage() {
+        localStorage.setItem('pendingAssets', JSON.stringify(pendingAssets));
+        localStorage.setItem('pendingDeletes', JSON.stringify(pendingDeletes));
+    }
+
+    // 更新分类侧边栏数量
+    function updateCategoryCounts() {
+        const counts = { all: assetsData.length, '综合': 0, '角色': 0, '武器': 0, '场景': 0, '特效': 0, '音效': 0 };
+        assetsData.forEach(asset => {
+            if (counts[asset.category] !== undefined) {
+                counts[asset.category]++;
+            }
+        });
+        for (const cat in counts) {
+            const el = document.getElementById('cat-count-' + cat);
+            if (el) el.textContent = counts[cat];
+        }
+    }
+
+    // 更新当前选中的分类高亮（恢复持久化状态）
+    function restoreCategorySelection() {
+        document.querySelectorAll(".sidebar-item").forEach(item => {
+            item.classList.remove("active");
+            if (item.dataset.cat === currentFilter) {
+                item.classList.add("active");
+            }
+        });
+    }
+
+    // 更新视图按钮高亮（恢复持久化状态）
+    function restoreViewSelection() {
+        document.querySelectorAll(".view-btn").forEach(btn => {
+            btn.classList.remove("active");
+            if ((btn.title === "网格视图" && currentView === "grid") ||
+                (btn.title === "列表视图" && currentView === "list")) {
+                btn.classList.add("active");
+            }
+        });
+    }
+
+    // 更新统计面板
+    function updateStats() {
+        const total = assetsData.length;
+        document.getElementById('statTotal').textContent = total;
+
+        let totalBytes = 0;
+        assetsData.forEach(asset => {
+            const sizeStr = asset.size || "0";
+            const match = sizeStr.match(/^([\d.]+)\s*(KB|MB|GB)?$/i);
+            if (match) {
+                const value = parseFloat(match[1]);
+                const unit = (match[2] || 'MB').toUpperCase();
+                if (unit === 'GB') totalBytes += value * 1024 * 1024 * 1024;
+                else if (unit === 'MB') totalBytes += value * 1024 * 1024;
+                else if (unit === 'KB') totalBytes += value * 1024;
+                else totalBytes += value * 1024 * 1024;
+            }
+        });
+
+        let displaySize;
+        const kb = totalBytes / 1024;
+        const mb = kb / 1024;
+        const gb = mb / 1024;
+
+        if (gb >= 1) {
+            displaySize = gb.toFixed(2) + ' GB';
+        } else if (mb >= 1) {
+            displaySize = mb.toFixed(2) + ' MB';
+        } else if (kb >= 1) {
+            displaySize = kb.toFixed(2) + ' KB';
+        } else {
+            displaySize = totalBytes.toFixed(0) + ' B';
+        }
+        document.getElementById('statSize').textContent = displaySize;
+    }
+
+    // 渲染网格/列表
+    function renderGrid() {
+        const filtered = assetsData.filter(asset => {
+            if(currentFilter !== "all") {
+                const cats = Array.isArray(asset.category) ? asset.category : [asset.category];
+                if (!cats.includes(currentFilter)) return false;
+            }
+            if(searchKeyword && !asset.name.toLowerCase().includes(searchKeyword.toLowerCase())) return false;
+            return true;
+        });
+        const container = document.getElementById("assetGrid");
+        const emptyState = document.getElementById("emptyState");
+        if(!container) return;
+        
+        // 空状态处理
+        if (filtered.length === 0) {
+            container.innerHTML = '';
+            emptyState.classList.add('show');
+        } else {
+            emptyState.classList.remove('show');
+        }
+        
+        // 切换容器类名
+        container.className = currentView;
+        
+        container.innerHTML = filtered.map(asset => `
+            <div class="asset-card" data-id="${asset.id}">
+                <div class="card-cover loading">
+                    <img src="${asset.cover}" alt="${asset.name}" loading="lazy" onload="this.parentElement.classList.remove('loading')">
+                    <div class="card-format">${asset.format}</div>
+                </div>
+                <div class="card-info">
+                    <div class="card-title">${asset.name}</div>
+                    <div class="card-meta">
+                        <div class="card-meta-item">
+                            <i class="fas fa-tag"></i>
+                            <span>${Array.isArray(asset.category) ? asset.category.join(', ') : asset.category}</span>
+                        </div>
+                        <div class="card-meta-item">
+                            <i class="fas fa-weight-hanging"></i>
+                            <span>${asset.size}</span>
+                        </div>
+                    </div>
+                    <button class="download-btn-small" data-link="${asset.downloadLink}" data-name="${asset.name}">
+                        <i class="fas fa-download"></i> 下载
+                    </button>
+                </div>
+            </div>
+        `).join("");
+
+        document.querySelectorAll(".asset-card").forEach(card => {
+            card.addEventListener("click", (e) => {
+                if(e.target.closest(".download-btn-small")) return;
+                const id = parseInt(card.dataset.id);
+                const asset = assetsData.find(a => a.id === id);
+                if(asset) openModal(asset);
+            });
+            const btn = card.querySelector(".download-btn-small");
+            if(btn) {
+                btn.addEventListener("click", (e) => {
+                    e.stopPropagation();
+                    const link = btn.dataset.link;
+                    if(link) window.open(link, "_blank");
+                });
+            }
+        });
+    }
+
+    // 弹窗逻辑
+    let currentModalAsset = null;
+
+    function openModal(asset) {
+        const pendingVersion = pendingAssets.find(p => p.id === asset.id);
+        const displayAsset = pendingVersion || asset;
+        
+        currentModalAsset = displayAsset;
+        
+        document.getElementById("modalCover").src = displayAsset.cover;
+        document.getElementById("modalTitle").innerText = displayAsset.name;
+        document.getElementById("modalAuthor").innerText = displayAsset.author;
+        document.getElementById("modalCategory").innerText = Array.isArray(displayAsset.category) ? displayAsset.category.join(', ') : displayAsset.category;
+        document.getElementById("modalFormat").innerText = displayAsset.format;
+        document.getElementById("modalSize").innerText = displayAsset.size;
+        document.getElementById("modalDesc").innerText = displayAsset.description || "暂无描述";
+        
+        const modal = document.getElementById("detailModal");
+        modal.style.display = "flex";
+
+        const downloadBtn = document.getElementById("modalDownloadBtn");
+        downloadBtn.onclick = () => {
+            if(currentModalAsset) window.open(currentModalAsset.downloadLink, "_blank");
+        };
+    }
+
+    const modal = document.getElementById("detailModal");
+    document.querySelector(".close-modal").onclick = () => modal.style.display = "none";
+    window.onclick = (e) => { if(e.target === modal) modal.style.display = "none"; };
+
+    // 侧边栏分类点击
+    document.querySelectorAll(".sidebar-item").forEach(item => {
+        item.addEventListener("click", () => {
+            document.querySelectorAll(".sidebar-item").forEach(i => i.classList.remove("active"));
+            item.classList.add("active");
+            currentFilter = item.dataset.cat;
+            localStorage.setItem('categoryFilter', currentFilter);
+            renderGrid();
+        });
+    });
+
+    // 搜索功能（带防抖）
+    let searchDebounceTimer = null;
+    document.getElementById("searchInput").addEventListener("input", (e) => {
+        clearTimeout(searchDebounceTimer);
+        searchDebounceTimer = setTimeout(() => {
+            searchKeyword = e.target.value;
+            renderGrid();
+        }, 300);
+    });
+
+    // 视图切换
+    document.querySelectorAll(".view-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+            document.querySelectorAll(".view-btn").forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+            currentView = btn.title === "网格视图" ? "grid" : "list";
+            localStorage.setItem('viewMode', currentView);
+            renderGrid();
+        });
+    });
+
+    // 投稿按钮提示
+    document.getElementById("openSubmit").addEventListener("click", (e) => {
+        e.preventDefault();
+        alert("投稿方式：请将素材信息（名称、分类、封面图链接、123云盘分享链接）发送至管理员QQ，由管理员统一上架。感谢支持！");
+    });
+
+    // 工具栏滚动吸附动画
+    const toolbar = document.querySelector('.toolbar');
+    const contentArea = document.querySelector('.content-area');
+
+    if (contentArea && toolbar) {
+        contentArea.addEventListener('scroll', () => {
+            if (contentArea.scrollTop > 20) {
+                toolbar.classList.add('stuck');
+            } else {
+                toolbar.classList.remove('stuck');
+            }
+        });
+    }
+
+    // 关于按钮
+    document.getElementById('openAbout').addEventListener('click', (e) => {
+        e.preventDefault();
+        alert("MadAsset - 暴力迪吧素材分享站\n\n本站收集整理了各类《暴力迪吧》相关创作资源，包括角色、武器、场景、特效、音效等。所有素材均配有统一封面，分类清晰，方便查找。\n\n素材来源于网络公开整理，仅供个人学习交流使用。如有版权问题请联系删除。\n\nQQ群：1101249524");
+    });
+
+    // ==================== 管理面板功能 ====================
+
+    // 点击触发计数
+    let adminClickCount = 0;
+    let adminClickTimer = null;
+    const ADMIN_PASSWORD = "a545";
+    const CLICK_TARGET = 5;
+
+    document.getElementById('adminTrigger').addEventListener('click', () => {
+        adminClickCount++;
+        if (adminClickTimer) clearTimeout(adminClickTimer);
+        adminClickTimer = setTimeout(() => { adminClickCount = 0; }, 2000);
+
+        if (adminClickCount >= CLICK_TARGET) {
+            adminClickCount = 0;
+            document.getElementById('passwordModal').style.display = 'flex';
+            document.getElementById('adminPassword').value = '';
+            document.getElementById('passwordError').style.display = 'none';
+            document.getElementById('adminPassword').focus();
+        }
+    });
+
+    // 密码验证
+    document.getElementById('passwordCancel').addEventListener('click', () => {
+        document.getElementById('passwordModal').style.display = 'none';
+    });
+
+    document.getElementById('passwordConfirm').addEventListener('click', () => {
+        const pwd = document.getElementById('adminPassword').value;
+        if (pwd === ADMIN_PASSWORD) {
+            document.getElementById('passwordModal').style.display = 'none';
+            openAdminPanel();
+        } else {
+            document.getElementById('passwordError').style.display = 'block';
+            document.getElementById('adminPassword').value = '';
+        }
+    });
+
+    document.getElementById('adminPassword').addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            document.getElementById('passwordConfirm').click();
+        }
+    });
+
+    // 关闭管理面板
+    document.getElementById('adminClose').addEventListener('click', () => {
+        document.getElementById('adminPanel').style.display = 'none';
+    });
+
+    function openAdminPanel() {
+        document.getElementById('adminPanel').style.display = 'flex';
+        renderAdminTable();
+    }
+
+    // 渲染管理面板表格
+    function renderAdminTable() {
+        const tbody = document.getElementById('adminTableBody');
+        const empty = document.getElementById('adminEmpty');
+        const container = document.getElementById('adminTableContainer');
+        const countEl = document.getElementById('adminCount');
+
+        // 构建显示列表：用待发布版本替换现有版本
+        const pendingIds = pendingAssets.map(p => p.id);
+        const displayAssets = assetsData.map(asset => {
+            const pendingVersion = pendingAssets.find(p => p.id === asset.id);
+            return pendingVersion ? { ...asset, ...pendingVersion, _isPendingEdit: true } : asset;
+        });
+
+        countEl.textContent = `共 ${assetsData.length} 条`;
+
+        if (displayAssets.length === 0) {
+            container.style.display = 'none';
+            empty.style.display = 'block';
+            return;
+        }
+
+        container.style.display = 'block';
+        empty.style.display = 'none';
+
+        tbody.innerHTML = displayAssets.map(asset => {
+            const isPendingDelete = pendingDeletes.includes(asset.id);
+            const isPendingEdit = asset._isPendingEdit;
+            return `
+            <tr style="${isPendingDelete ? 'opacity: 0.5; background: rgba(231, 76, 60, 0.1);' : isPendingEdit ? 'background: rgba(39, 174, 96, 0.1);' : ''}">
+                <td class="col-cover">
+                    <img src="${asset.cover}" alt="${asset.name}" style="${isPendingDelete ? 'filter: grayscale(50%);' : ''}" onerror="this.src='${PLACEHOLDER_IMG}'">
+                </td>
+                <td style="${isPendingDelete ? 'text-decoration: line-through; color: var(--text-muted);' : ''}">${asset.name} ${isPendingEdit ? '<span style="color: var(--success); font-size: 0.7rem;">[已修改]</span>' : ''}</td>
+                <td>${Array.isArray(asset.category) ? asset.category.join(', ') : asset.category}</td>
+                <td>${asset.format}</td>
+                <td>${asset.size}</td>
+                <td class="col-actions">
+                    <button class="admin-action-btn edit" title="编辑" onclick="editAsset(${asset.id})" ${isPendingDelete ? 'disabled style="opacity:0.3;cursor:not-allowed;"' : ''}>
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="admin-action-btn ${isPendingDelete ? '' : 'delete'}" title="${isPendingDelete ? '取消删除' : '删除'}" onclick="deleteAsset(${asset.id})" style="${isPendingDelete ? 'color: var(--success);' : ''}">
+                        <i class="fas fa-${isPendingDelete ? 'undo' : 'trash'}"></i>
+                    </button>
+                </td>
+            </tr>
+        `}).join('');
+    }
+
+    // 打开添加表单
+    document.getElementById('adminAdd').addEventListener('click', () => {
+        document.getElementById('formTitle').textContent = '添加新素材';
+        document.getElementById('formId').value = '';
+        document.getElementById('formName').value = '';
+        document.getElementById('formAuthor').value = '神秘素材师';
+        document.querySelectorAll('input[name="formCategory"]').forEach(cb => cb.checked = false);
+        document.getElementById('formFormat').value = 'FLA';
+        document.getElementById('formSize').value = '';
+        document.getElementById('formSizeUnit').value = 'MB';
+        document.getElementById('formCover').value = '';
+        document.getElementById('formDownload').value = '';
+        document.getElementById('formDesc').value = '';
+        document.getElementById('coverPreview').style.display = 'none';
+        const oldTip = document.getElementById('coverSaveTip');
+        if (oldTip) oldTip.remove();
+        document.getElementById('formModal').style.display = 'flex';
+    });
+
+    // 封面图片上传
+    document.getElementById('uploadCoverBtn').addEventListener('click', () => {
+        document.getElementById('coverFileInput').click();
+    });
+
+    document.getElementById('coverFileInput').addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+
+        if (!file.type.startsWith('image/')) {
+            showToast('请选择图片文件', 'error');
+            return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = (event) => {
+            const previewUrl = event.target.result;
+            document.getElementById('coverPreviewImg').src = previewUrl;
+            document.getElementById('coverPreview').style.display = 'block';
+            
+            const nameInput = document.getElementById('formName').value.trim();
+            const baseName = nameInput ? nameInput.replace(/[^\u4e00-\u9fa5a-zA-Z0-9]/g, '_') : Date.now();
+            const ext = file.name.split('.').pop() || 'jpg';
+            const fileName = `${baseName}.${ext}`;
+            const relativePath = `covers/${fileName}`;
+            
+            document.getElementById('formCover').value = relativePath;
+            
+            const downloadLink = document.createElement('a');
+            downloadLink.href = previewUrl;
+            downloadLink.download = fileName;
+            
+            const tipDiv = document.getElementById('coverSaveTip');
+            if (tipDiv) tipDiv.remove();
+            
+            const tip = document.createElement('div');
+            tip.id = 'coverSaveTip';
+            tip.style.cssText = 'margin-top: 8px; padding: 8px; background: var(--bg-tertiary); border-radius: 2px; font-size: 0.75rem; color: var(--text-secondary);';
+            tip.innerHTML = `<i class="fas fa-info-circle"></i> 图片将保存为: <code style="background: var(--card-bg); padding: 2px 6px; border-radius: 2px;">${relativePath}</code><br>
+            <button type="button" id="downloadCoverBtn" style="margin-top: 6px; padding: 4px 12px; font-size: 0.7rem; background: var(--accent-red); color: white; border: none; border-radius: 2px; cursor: pointer;">
+                <i class="fas fa-download"></i> 下载图片到本地
+            </button> <span style="color: var(--text-muted);">然后放入 covers 文件夹</span>`;
+            document.getElementById('coverPreview').after(tip);
+            
+            document.getElementById('downloadCoverBtn').addEventListener('click', () => {
+                downloadLink.click();
+            });
+        };
+        reader.readAsDataURL(file);
+        e.target.value = '';
+    });
+
+    // 封面URL输入时显示预览
+    document.getElementById('formCover').addEventListener('input', (e) => {
+        const url = e.target.value.trim();
+        if (url) {
+            document.getElementById('coverPreviewImg').src = url;
+            document.getElementById('coverPreview').style.display = 'block';
+        } else {
+            document.getElementById('coverPreview').style.display = 'none';
+        }
+    });
+
+    // 打开编辑表单
+    function editAsset(id) {
+        const asset = assetsData.find(a => a.id === id);
+        if (!asset) return;
+
+        document.getElementById('formTitle').textContent = '编辑素材';
+        document.getElementById('formId').value = asset.id;
+        document.getElementById('formName').value = asset.name;
+        document.getElementById('formAuthor').value = asset.author;
+        // 设置分类（支持数组和单值）
+        const cats = Array.isArray(asset.category) ? asset.category : [asset.category];
+        document.querySelectorAll('input[name="formCategory"]').forEach(cb => {
+            cb.checked = cats.includes(cb.value);
+        });
+        document.getElementById('formFormat').value = asset.format;
+        
+        // 分离文件大小数值和单位
+        const sizeMatch = asset.size.match(/^([\d.]+)\s*(KB|MB|GB)?$/i);
+        if (sizeMatch) {
+            document.getElementById('formSize').value = sizeMatch[1];
+            document.getElementById('formSizeUnit').value = sizeMatch[2] || 'MB';
+        } else {
+            document.getElementById('formSize').value = asset.size;
+            document.getElementById('formSizeUnit').value = 'MB';
+        }
+        
+        document.getElementById('formCover').value = asset.cover;
+        document.getElementById('formDownload').value = asset.downloadLink;
+        document.getElementById('formDesc').value = asset.description || '';
+        
+        // 显示封面预览
+        if (asset.cover) {
+            document.getElementById('coverPreviewImg').src = asset.cover;
+            document.getElementById('coverPreview').style.display = 'block';
+        } else {
+            document.getElementById('coverPreview').style.display = 'none';
+        }
+        const oldTip = document.getElementById('coverSaveTip');
+        if (oldTip) oldTip.remove();
+        document.getElementById('formModal').style.display = 'flex';
+    }
+
+    // 保存表单
+    document.getElementById('formSave').addEventListener('click', () => {
+        const name = document.getElementById('formName').value.trim();
+        const cover = document.getElementById('formCover').value.trim();
+        const download = document.getElementById('formDownload').value.trim();
+
+        const categories = document.querySelectorAll('input[name="formCategory"]:checked');
+        
+        if (!name || !cover || !download) {
+            showToast('请填写必填项（名称、封面图、下载链接）', 'error');
+            return;
+        }
+        
+        if (categories.length === 0) {
+            showToast('请至少选择一个分类', 'error');
+            return;
+        }
+
+        const id = document.getElementById('formId').value;
+        const assetData = {
+            id: id ? parseInt(id) : Date.now(),
+            name: name,
+            author: document.getElementById('formAuthor').value.trim() || '神秘素材师',
+            category: Array.from(document.querySelectorAll('input[name="formCategory"]:checked')).map(cb => cb.value),
+            format: document.getElementById('formFormat').value,
+            size: (document.getElementById('formSize').value.trim() || '0') + ' ' + document.getElementById('formSizeUnit').value,
+            cover: cover,
+            downloadLink: download,
+            description: document.getElementById('formDesc').value.trim()
+        };
+
+        if (id) {
+            // 编辑模式：添加到待发布列表（替换原有项）
+            pendingAssets.push(assetData);
+            savePendingToStorage();
+            renderPendingList();
+            showToast('已添加到待发布列表', 'success');
+        } else {
+            // 新增模式：添加到待发布列表
+            pendingAssets.push(assetData);
+            savePendingToStorage();
+            renderPendingList();
+            showToast('已添加到待发布列表', 'success');
+        }
+
+        document.getElementById('formModal').style.display = 'none';
+    });
+
+    // 取消表单
+    document.getElementById('formCancel').addEventListener('click', () => {
+        document.getElementById('formModal').style.display = 'none';
+    });
+
+    // 删除素材（添加到待删除列表）
+    function deleteAsset(id) {
+        const asset = assetsData.find(a => a.id === id);
+        if (!asset) return;
+        
+        // 检查是否已在待删除列表
+        if (pendingDeletes.includes(id)) {
+            // 取消删除
+            pendingDeletes = pendingDeletes.filter(i => i !== id);
+            savePendingToStorage();
+            showToast('已取消删除', 'success');
+        } else {
+            pendingDeletes.push(id);
+            savePendingToStorage();
+            showToast('已添加到待删除列表', 'success');
+        }
+        
+        renderAdminTable();
+        renderPendingList();
+    }
+
+    // ==================== 待发布列表功能 ====================
+
+    // 渲染待发布列表
+    function renderPendingList() {
+        const section = document.getElementById('pendingSection');
+        const list = document.getElementById('pendingList');
+        const count = document.getElementById('pendingCount');
+        const count2 = document.getElementById('pendingCount2');
+
+        const total = pendingAssets.length + pendingDeletes.length;
+        count.textContent = total;
+        count2.textContent = total;
+
+        if (total === 0) {
+            section.style.display = 'none';
+            return;
+        }
+
+        section.style.display = 'block';
+        
+        let html = '';
+        
+        // 待添加列表
+        if (pendingAssets.length > 0) {
+            html += `<div style="margin-bottom: 8px;"><span style="font-size: 0.7rem; color: var(--success);"><i class="fas fa-plus"></i> 待添加 (${pendingAssets.length})</span></div>`;
+            html += pendingAssets.map((asset, index) => `
+                <div class="pending-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 10px; background: var(--card-bg); border: 1px solid var(--success); border-radius: 2px; margin-bottom: 4px;">
+                    <img src="${asset.cover}" style="width: 32px; height: 32px; object-fit: cover; border-radius: 2px;" onerror="this.src='${PLACEHOLDER_IMG}'">
+                    <span style="flex: 1; font-size: 0.8rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${asset.name}</span>
+                    <button onclick="removePending(${index})" style="background: none; border: none; color: var(--text-muted); cursor: pointer; padding: 2px;">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            `).join('');
+        }
+        
+        // 待删除列表
+        if (pendingDeletes.length > 0) {
+            html += `<div style="margin-top: 12px; margin-bottom: 8px;"><span style="font-size: 0.7rem; color: #e74c3c;"><i class="fas fa-trash"></i> 待删除 (${pendingDeletes.length})</span></div>`;
+            pendingDeletes.forEach((id) => {
+                const asset = assetsData.find(a => a.id === id);
+                if (asset) {
+                    html += `
+                        <div class="pending-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 10px; background: var(--card-bg); border: 1px solid #e74c3c; border-radius: 2px; margin-bottom: 4px; opacity: 0.7;">
+                            <img src="${asset.cover}" style="width: 32px; height: 32px; object-fit: cover; border-radius: 2px;" onerror="this.src='${PLACEHOLDER_IMG}'">
+                            <span style="flex: 1; font-size: 0.8rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-decoration: line-through;">${asset.name}</span>
+                            <button onclick="cancelDelete(${id})" style="background: none; border: none; color: var(--text-muted); cursor: pointer; padding: 2px;">
+                                <i class="fas fa-undo"></i>
+                            </button>
+                        </div>
+                    `;
+                }
+            });
+        }
+        
+        list.innerHTML = html;
+    }
+
+    // 从待发布列表移除
+    function removePending(index) {
+        pendingAssets.splice(index, 1);
+        savePendingToStorage();
+        renderPendingList();
+        showToast('已从待发布列表移除', 'success');
+    }
+
+    // 取消删除
+    function cancelDelete(id) {
+        pendingDeletes = pendingDeletes.filter(i => i !== id);
+        savePendingToStorage();
+        renderPendingList();
+        renderAdminTable();
+        showToast('已取消删除', 'success');
+    }
+
+    // 清空待发布列表
+    document.getElementById('clearPendingBtn').addEventListener('click', () => {
+        const total = pendingAssets.length + pendingDeletes.length;
+        if (total === 0) return;
+        if (!confirm('确定要清空待发布列表吗？')) return;
+        pendingAssets = [];
+        pendingDeletes = [];
+        savePendingToStorage();
+        renderPendingList();
+        renderAdminTable();
+        showToast('待发布列表已清空', 'success');
+    });
+
+    // 确认发布（合并到主数据并导出JSON）
+    document.getElementById('confirmPublishBtn').addEventListener('click', () => {
+        const total = pendingAssets.length + pendingDeletes.length;
+        if (total === 0) {
+            showToast('待发布列表为空', 'error');
+            return;
+        }
+
+        // 执行删除
+        if (pendingDeletes.length > 0) {
+            assetsData = assetsData.filter(a => !pendingDeletes.includes(a.id));
+        }
+
+        // 执行添加/编辑：先移除待编辑的项，再添加新版本
+        const pendingIds = pendingAssets.map(p => p.id);
+        assetsData = assetsData.filter(a => !pendingIds.includes(a.id));
+        assetsData = [...assetsData, ...pendingAssets];
+
+        const editCount = pendingAssets.filter(p => assetsData.some(a => a.id === p.id)).length;
+        const addCount = pendingAssets.length - editCount;
+        const delCount = pendingDeletes.length;
+        pendingAssets = [];
+        pendingDeletes = [];
+        savePendingToStorage();
+
+        renderPendingList();
+        renderAdminTable();
+        updateStats();
+        renderGrid();
+
+        const json = JSON.stringify({ assets: assetsData }, null, 2);
+        const blob = new Blob([json], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'assets.json';
+        a.click();
+        URL.revokeObjectURL(url);
+
+        let msg = '';
+        if (addCount > 0 && delCount > 0) {
+            msg = `已添加 ${addCount} 条，修改 ${editCount} 条，删除 ${delCount} 条`;
+        } else if (addCount > 0 && editCount > 0) {
+            msg = `已添加 ${addCount} 条，修改 ${editCount} 条`;
+        } else if (addCount > 0) {
+            msg = `已添加 ${addCount} 条素材`;
+        } else if (editCount > 0) {
+            msg = `已修改 ${editCount} 条素材`;
+        } else {
+            msg = `已删除 ${delCount} 条素材`;
+        }
+        msg += '，JSON已自动下载';
+        showToast(msg, 'success');
+    });
+
+    // 发布按钮（快捷方式）
+    document.getElementById('adminPublish').addEventListener('click', () => {
+        const total = pendingAssets.length + pendingDeletes.length;
+        if (total === 0) {
+            showToast('待发布列表为空，请先添加或删除素材', 'error');
+            return;
+        }
+        if (confirm(`确定要发布所有变更吗？\n\n添加: ${pendingAssets.length} 条\n删除: ${pendingDeletes.length} 条`)) {
+            document.getElementById('confirmPublishBtn').click();
+        }
+    });
+
+    // Toast提示
+    function showToast(message, type = 'success') {
+        const toast = document.getElementById('toast');
+        toast.textContent = message;
+        toast.className = 'toast ' + type + ' show';
+        setTimeout(() => { toast.className = 'toast'; }, 2500);
+    }
+
+    // 初始化
+    document.getElementById('loadingOverlay').classList.add('show');
+    loadAssets().finally(() => {
+        document.getElementById('loadingOverlay').classList.remove('show');
+    });
+</script>
+
+</body>
+</html>
